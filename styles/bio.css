@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=bio.css.map */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  background-color: #323232;
+  color: #fff;
+}
+/*# sourceMappingURL=bio.css.map */
