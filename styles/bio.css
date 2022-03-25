@@ -40,8 +40,8 @@ html {
 }
 
 .site-logo__image {
-  width: 35%;
-  margin: 1rem 0;
+  width: 40%;
+  margin: 1.5rem 0;
 }
 
 .site-logo__link {
@@ -75,14 +75,14 @@ a.navigation-section__link {
   background-image: url("../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  height: 60vh;
+  height: 70vh;
 }
 
 .hero-section__heading {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-top: 0;
-  padding-top: 9rem;
+  padding-top: 11.5rem;
   padding-left: 1.5rem;
   line-height: 2rem;
 }
@@ -95,14 +95,14 @@ a.navigation-section__link {
 }
 
 .about-section__heading {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   padding: 0.8rem 1.5rem;
 }
 
 .about-section__paragraph {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
   font-weight: 600;
-  line-height: 1.4rem;
   padding: 0 1.5rem;
 }
 
@@ -112,8 +112,8 @@ a.navigation-section__link {
 }
 
 .text-section__paragragh {
-  font-size: 0.8rem;
-  line-height: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
   padding-bottom: 1rem;
 }
 
@@ -135,7 +135,7 @@ a.navigation-section__link {
 .gallery-section__heading {
   padding: 1rem 1.5rem;
   padding-bottom: 0;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 footer {
@@ -143,22 +143,16 @@ footer {
   padding: 0 1.5rem;
 }
 
-.footer-section,
-h6 {
+.footer-section {
   color: #fff;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   padding: 0;
 }
 
 .footer-section__heading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-top: 2rem;
-}
-
-a.footer-section__email {
-  color: #fff;
-  text-decoration: none;
 }
 
 .footer-section__email {
@@ -166,40 +160,47 @@ a.footer-section__email {
   padding-bottom: 2rem;
 }
 
-.footer-section__paragraph,
-.footer-section__email {
-  width: 60%;
-  padding-bottom: 1rem;
-}
-
 .footer-section__subheading {
   font-weight: bold;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 .footer-section__icons {
-  width: 40%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1.8rem 0;
+  margin: 2rem 0;
 }
 
 .footer-section__logo {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   margin-top: 4rem;
-  width: 35%;
+  width: 40%;
+}
+
+a.footer-section__email {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section__paragraph,
+.footer-section__email {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding-bottom: 1.5rem;
+  width: 75%;
 }
 
 small {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   margin-left: 1.5rem;
 }
 /*# sourceMappingURL=bio.css.map */

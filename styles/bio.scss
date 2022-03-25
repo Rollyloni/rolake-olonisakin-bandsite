@@ -9,21 +9,26 @@
 
 $primary-color: #323232;
 $secondary-color: #fff;
+
 header,
 footer {
   background-color: $primary-color;
 }
+
 html {
   font-family: "AvenirNext LT Pro";
 }
+
 .site-logo__image {
-  width: 35%;
-  margin: 1rem 0;
+  width: 40%;
+  margin: 1.5rem 0;
 }
+
 .site-logo__link {
   display: flex;
   justify-content: center;
 }
+
 a.navigation-section__link {
   color: #fff;
   text-decoration: none;
@@ -31,6 +36,7 @@ a.navigation-section__link {
   margin-bottom: 1rem;
   list-style: none;
 }
+
 .navigation-section__list {
   display: flex;
   padding: 0;
@@ -42,109 +48,129 @@ a.navigation-section__link {
   background-image: url("../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  height: 60vh;
+  height: 70vh;
+
+  &__heading {
+    color: $secondary-color;
+    font-size: 2.4rem;
+    margin-top: 0;
+    padding-top: 11.5rem;
+    padding-left: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
-.hero-section__heading {
-  color: $secondary-color;
-  font-size: 2rem;
-  margin-top: 0;
-  padding-top: 9rem;
-  padding-left: 1.5rem;
-  line-height: 2rem;
+.about-section {
+  &__image {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 1.5rem;
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  &__paragraph {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 0 1.5rem;
+  }
 }
-.about-section__image {
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  padding: 0.5rem 1.5rem;
+
+.text-section {
+  &__heading {
+    padding: 1.5rem 0;
+    font-weight: normal;
+  }
+
+  &__paragragh {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    padding-bottom: 1rem;
+  }
+
+  &__container {
+    padding: 0 1.5rem;
+  }
 }
-.about-section__heading {
-  font-size: 1.8rem;
-  padding: 0.8rem 1.5rem;
-}
-.about-section__paragraph {
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.4rem;
-  padding: 0 1.5rem;
-}
-.text-section__heading {
-  padding: 1.5rem 0;
-  font-weight: normal;
-}
-.text-section__paragragh {
-  font-size: 0.8rem;
-  line-height: 1.2rem;
-  padding-bottom: 1rem;
-}
-.text-section__container {
-  padding: 0 1.5rem;
-}
+
 .gallery-section {
   background-color: #fafafa;
+
+  &__image {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0.6rem 1.5rem;
+  }
+
+  &__heading {
+    padding: 1rem 1.5rem;
+    padding-bottom: 0;
+    font-size: 2.2rem;
+  }
 }
 
-.gallery-section__image {
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  padding: 0.6rem 1.5rem;
-}
-.gallery-section__heading {
-  padding: 1rem 1.5rem;
-  padding-bottom: 0;
-  font-size: 1.8rem;
-}
 footer {
   position: relative;
   padding: 0 1.5rem;
 }
-.footer-section,
-h6 {
+.footer-section {
   color: #fff;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   padding: 0;
-}
-.footer-section__heading {
-  font-size: 1.5rem;
-  padding-top: 2rem;
+  &__heading {
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
+  &__email {
+    display: inline-block;
+    padding-bottom: 2rem;
+  }
+
+  &__subheading {
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+  }
+
+  &__icons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+
+  &__logo {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    width: 40%;
+  }
 }
 
 a.footer-section__email {
   color: #fff;
   text-decoration: none;
 }
-.footer-section__email {
-  display: inline-block;
-  padding-bottom: 2rem;
-}
+
 .footer-section__paragraph,
 .footer-section__email {
-  width: 60%;
-  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding-bottom: 1.5rem;
+  width: 75%;
 }
-.footer-section__subheading {
-  font-weight: bold;
-  padding-bottom: 1rem;
-}
-.footer-section__icons {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  margin: 1.8rem 0;
-}
-.footer-section__logo {
-  margin-bottom: 2.5rem;
-  margin-top: 4rem;
-  width: 35%;
-}
+
 small {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   margin-left: 1.5rem;
 }
