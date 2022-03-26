@@ -1,12 +1,8 @@
 @import "./partials/typography";
 
-@keyframes click {
-  0% {
-    border-bottom: 4px solid white;
-  }
-
-  100% {
-    border-bottom: 4px solid white;
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
   }
 }
 
@@ -20,19 +16,30 @@
 $primary-color: #323232;
 $secondary-color: #fff;
 
+html {
+  font-family: "AvenirNext LT Pro";
+}
+
 header,
 footer {
   background-color: $primary-color;
 }
 
-html {
-  font-family: "AvenirNext LT Pro";
+header {
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-logo__image {
   width: 7.5rem;
   height: 1.2rem;
   margin: 1.5rem 0;
+
+  @include tablet {
+    margin: 2rem 4rem;
+  }
 }
 
 .site-logo__link {
@@ -46,6 +53,13 @@ a.navigation-section__link {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   list-style: none;
+  &.bold {
+    font-weight: bold;
+  }
+
+  @include tablet {
+    padding-left: 3rem;
+  }
 }
 
 .navigation-section__list {
@@ -60,6 +74,12 @@ a.navigation-section__link {
   text-align: center;
   padding-bottom: 30px;
 
+  @include tablet {
+    padding-bottom: 1.7rem;
+    padding-right: 5rem;
+    width: 30%;
+  }
+
   &.active {
     border-bottom: 4px solid white;
   }
@@ -71,6 +91,10 @@ a.navigation-section__link {
   background-size: cover;
   height: 70vh;
 
+  @include tablet {
+    height: 120vh;
+  }
+
   &__heading {
     color: $secondary-color;
     font-size: 2.4rem;
@@ -78,6 +102,12 @@ a.navigation-section__link {
     padding-top: 11.5rem;
     padding-left: 1.5rem;
     line-height: 2rem;
+
+    @include tablet {
+      font-size: 5rem;
+      padding-left: 4rem;
+      padding-top: 23rem;
+    }
   }
 }
 
@@ -87,11 +117,20 @@ a.navigation-section__link {
     width: 100%;
     height: auto;
     padding: 0.5rem 1.5rem;
+
+    @include tablet {
+      padding: 0 7rem;
+    }
   }
 
   &__heading {
     font-size: 2.2rem;
     padding: 0.8rem 1.5rem;
+
+    @include tablet {
+      font-size: 3rem;
+      padding: 3rem 4rem;
+    }
   }
 
   &__paragraph {
@@ -99,6 +138,11 @@ a.navigation-section__link {
     line-height: 2rem;
     font-weight: 600;
     padding: 0 1.5rem;
+
+    @include tablet {
+      padding: 1rem 7.2rem;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -106,33 +150,72 @@ a.navigation-section__link {
   &__heading {
     padding: 1.5rem 0;
     font-weight: normal;
+
+    @include tablet {
+      padding: 1.5rem 7rem;
+      font-weight: bold;
+      font-size: 2rem;
+    }
   }
 
   &__paragragh {
     font-size: 1.2rem;
     line-height: 1.8rem;
     padding-bottom: 1rem;
+
+    @include tablet {
+      margin-right: 4rem;
+      line-height: 1.9rem;
+    }
   }
 
   &__container {
     padding: 0 1.5rem;
+
+    @include tablet {
+      display: flex;
+      padding: 1rem 7rem;
+      padding-right: 2.5rem;
+    }
   }
 }
 
 .gallery-section {
   background-color: #fafafa;
 
+  @include tablet {
+    padding: 1.5rem;
+  }
+
+  .gallery-section__container {
+    @include tablet {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 33%;
+      margin-bottom: 1rem;
+    }
+  }
+
   &__image {
     margin: 0 auto;
     width: 100%;
     height: auto;
     padding: 0.6rem 1.5rem;
+
+    @include tablet {
+      padding: 0.6rem 1rem;
+    }
   }
 
   &__heading {
     padding: 1rem 1.5rem;
     padding-bottom: 0;
     font-size: 2.2rem;
+
+    @include tablet {
+      font-size: 2.8rem;
+      padding: 2rem 1rem;
+    }
   }
 }
 
@@ -145,9 +228,14 @@ footer {
   font-size: 1.2rem;
   line-height: 1.6rem;
   padding: 0;
+
   &__heading {
     font-size: 2rem;
     padding-top: 2rem;
+
+    @include tablet {
+      font-size: 2.8rem;
+    }
   }
 
   &__email {
@@ -165,6 +253,11 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: 2rem 0;
+
+    @include tablet {
+      width: 30%;
+      margin-left: 3.5rem;
+    }
   }
 
   &__logo {
@@ -172,6 +265,20 @@ footer {
     margin-top: 4rem;
     width: 7.5rem;
     height: 1.2rem;
+  }
+
+  &.top {
+    @include tablet {
+      display: flex;
+      align-items: bottom;
+      padding: 3rem 1rem;
+    }
+  }
+
+  &.bottom {
+    @include tablet {
+      display: flex;
+    }
   }
 }
 
