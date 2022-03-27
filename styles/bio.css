@@ -172,11 +172,13 @@ small {
   font-size: 1rem;
   margin-bottom: 1rem;
   margin-left: 1.5rem;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 768px) {
   small {
     padding: 0 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -441,7 +443,7 @@ a.navigation-section__link.bold {
 }
 
 .text-section__heading {
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   font-weight: normal;
 }
 

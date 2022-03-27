@@ -2,7 +2,6 @@
 @import "./partials/footer";
 @import "./partials/gallery";
 
-
 @mixin tablet {
   @media (min-width: 768px) {
     @content;
@@ -182,7 +181,7 @@ a.navigation-section__link {
 
 .text-section {
   &__heading {
-    padding: 1.5rem 0;
+    padding: 1.5rem;
     font-weight: normal;
 
     @include tablet {
