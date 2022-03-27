@@ -1,0 +1,139 @@
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+footer {
+  position: relative;
+  padding: 0 1.5rem;
+
+  @include tablet {
+    padding: 0 3rem;
+  }
+
+  @include desktop {
+    padding: 0 8rem;
+  }
+}
+.footer-section {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 0;
+
+  &__heading {
+    font-size: 2rem;
+    padding-top: 2rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__email {
+    display: inline-block;
+    padding-bottom: 2rem;
+
+    @include tablet {
+      margin-bottom: 3rem;
+    }
+
+    @include desktop {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__subheading {
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+  }
+
+  &__icons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    @include tablet {
+      margin-left: 5.5rem;
+      width: 10rem;
+    }
+
+    @include desktop {
+      margin-left: 10rem;
+    }
+  }
+
+  &__logo {
+    margin: 4rem 0;
+    width: 7.5rem;
+    height: 1.2rem;
+
+    @include tablet {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-right: 2rem;
+      margin-top: 5.5rem;
+    }
+
+    @include desktop {
+      margin-right: 10rem;
+    }
+  }
+
+  &.top {
+    @include tablet {
+      display: flex;
+      align-items: bottom;
+      padding: 2.5rem 0;
+    }
+  }
+
+  &.bottom {
+    @include tablet {
+      display: flex;
+    }
+  }
+}
+
+a.footer-section__email {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section__paragraph,
+.footer-section__email {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding-bottom: 1.5rem;
+  width: 75%;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+
+  @include tablet {
+    padding: 0 1.2rem;
+  }
+
+  @include desktop {
+    padding: 0 6.2rem;
+  }
+}

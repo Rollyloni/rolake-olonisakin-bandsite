@@ -1,7 +1,16 @@
 @import "./partials/typography";
+@import "./partials/footer";
+@import "./partials/gallery";
+
 
 @mixin tablet {
   @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
     @content;
   }
 }
@@ -39,6 +48,11 @@ header {
 
   @include tablet {
     margin: 2rem 4rem;
+  }
+
+  @include desktop {
+    margin: 2rem 8rem;
+    margin-right: 4rem;
   }
 }
 
@@ -108,6 +122,11 @@ a.navigation-section__link {
       padding-left: 4rem;
       padding-top: 23rem;
     }
+
+    @include desktop {
+      padding-left: 8rem;
+      font-size: 6rem;
+    }
   }
 }
 
@@ -121,6 +140,10 @@ a.navigation-section__link {
     @include tablet {
       padding: 0 7rem;
     }
+
+    @include desktop {
+      padding: 0 14rem;
+    }
   }
 
   &__heading {
@@ -130,6 +153,10 @@ a.navigation-section__link {
     @include tablet {
       font-size: 3rem;
       padding: 3rem 4rem;
+    }
+
+    @include desktop {
+      padding-left: 8rem;
     }
   }
 
@@ -143,6 +170,13 @@ a.navigation-section__link {
       padding: 1rem 7.2rem;
       padding-bottom: 0;
     }
+
+    @include desktop {
+      padding: 2.5rem 14rem;
+      padding-bottom: 0;
+      font-size: 1.6rem;
+      line-height: 2.3rem;
+    }
   }
 }
 
@@ -155,6 +189,11 @@ a.navigation-section__link {
       padding: 1.5rem 7rem;
       font-weight: bold;
       font-size: 2rem;
+    }
+
+    @include desktop {
+      padding: 3rem 14rem;
+      padding-bottom: 2rem;
     }
   }
 
@@ -177,129 +216,9 @@ a.navigation-section__link {
       padding: 1rem 7rem;
       padding-right: 2.5rem;
     }
-  }
-}
 
-.gallery-section {
-  background-color: #fafafa;
-
-  @include tablet {
-    padding: 1.5rem;
-  }
-
-  .gallery-section__container {
-    @include tablet {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 33%;
-      margin-bottom: 1rem;
+    @include desktop {
+      padding: 2rem 14rem;
     }
   }
-
-  &__image {
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-    padding: 0.6rem 1.5rem;
-
-    @include tablet {
-      padding: 0.6rem 1rem;
-    }
-  }
-
-  &__heading {
-    padding: 1rem 1.5rem;
-    padding-bottom: 0;
-    font-size: 2.2rem;
-
-    @include tablet {
-      font-size: 2.8rem;
-      padding: 2rem 1rem;
-    }
-  }
-}
-
-footer {
-  position: relative;
-  padding: 0 1.5rem;
-}
-.footer-section {
-  color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  padding: 0;
-
-  &__heading {
-    font-size: 2rem;
-    padding-top: 2rem;
-
-    @include tablet {
-      font-size: 2.8rem;
-    }
-  }
-
-  &__email {
-    display: inline-block;
-    padding-bottom: 2rem;
-  }
-
-  &__subheading {
-    font-weight: bold;
-    padding-bottom: 1.5rem;
-  }
-
-  &__icons {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
-
-    @include tablet {
-      width: 30%;
-      margin-left: 3.5rem;
-    }
-  }
-
-  &__logo {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-    width: 7.5rem;
-    height: 1.2rem;
-  }
-
-  &.top {
-    @include tablet {
-      display: flex;
-      align-items: bottom;
-      padding: 3rem 1rem;
-    }
-  }
-
-  &.bottom {
-    @include tablet {
-      display: flex;
-    }
-  }
-}
-
-a.footer-section__email {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-section__paragraph,
-.footer-section__email {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  padding-bottom: 1.5rem;
-  width: 75%;
-}
-
-small {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1.5rem;
 }
