@@ -1,0 +1,43 @@
+.comment-section {
+  padding: 0rem 1.5rem;
+
+  &__div {
+    display: flex;
+  }
+
+  &__header {
+    padding: 2.5rem 0;
+    padding-left: 1rem;
+    font-size: 2.4rem;
+  }
+
+  &__avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    padding-left: 1rem;
+  }
+
+  &__date {
+    color: #afafaf;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-left: 11.6rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    padding-left: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e1e1e1;
+  }
+}

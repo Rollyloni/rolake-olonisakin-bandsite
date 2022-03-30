@@ -1,6 +1,7 @@
 @import "./partials/typography";
 @import "./partials/footer";
 @import "./partials/gallery";
+@import "./partials/comment";
 
 @mixin tablet {
   @media (min-width: 768px) {
@@ -220,4 +221,19 @@ a.navigation-section__link {
       padding: 2rem 14rem;
     }
   }
+}
+
+.form__name,
+.form__comment {
+  color: #afafaf;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  margin-left: 4rem;
+}
+input {
+  width: 80%;
+  height: 20rem;
+  border-radius: 1rem;
+  border-color: #afafaf;
+  margin-left: 4rem;
 }
