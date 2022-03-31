@@ -39,59 +39,72 @@ const formEl = document.createElement("form");
 formEl.classList.add("form__name");
 sectionEl.appendChild(formEl);
 
-const inputNameEl = document.createElement("p");
+const avatarEl = document.createElement("img");
+avatarEl.classList.add("comment-section__avatar");
+avatarEl.setAttribute("src", "assets/images/mohan-muruge.jpg");
+formEl.appendChild(avatarEl);
+
+const inputNameEl = document.createElement("label");
 inputNameEl.classList.add("form__name");
 inputNameEl.innerText = "NAME";
 formEl.appendChild(inputNameEl);
 
 const inputEl = document.createElement("input");
 inputEl.setAttribute("type", "text");
-inputEl.setAttribute("name", "fullname");
+inputEl.setAttribute("placeholder", "Enter your name");
+inputEl.setAttribute("name", "fullName");
 inputEl.innerText = "Enter Your Name";
 formEl.appendChild(inputEl);
 
-const inputCommentEl = document.createElement("p");
+const inputCommentEl = document.createElement("label");
 inputCommentEl.classList.add("form__comment");
 inputCommentEl.innerText = "COMMENT";
 formEl.appendChild(inputCommentEl);
 
-const typeCommentEl = document.createElement("input");
+const typeCommentEl = document.createElement("textarea");
 typeCommentEl.setAttribute("type", "text");
+typeCommentEl.setAttribute("placeholder", "Add a new comment");
 typeCommentEl.setAttribute("name", "comment");
 formEl.appendChild(typeCommentEl);
+
+const buttonEl = document.createElement("button");
+buttonEl.classList.add("form__button");
+buttonEl.innerText = "COMMENT";
+buttonEl.setAttribute("href", "index.html");
+formEl.appendChild(buttonEl);
 
 //Would be a function
 const containerEl = document.createElement("article");
 
+function displayComment(person) {
+  containerEl.classList.add("comment-section__container");
+  sectionEl.appendChild(containerEl);
+
+  const divEl = document.createElement("div");
+  divEl.classList.add("comment-section__div");
+  containerEl.appendChild(divEl);
+
+  const avatarEl = document.createElement("img");
+  avatarEl.classList.add("comment-section__avatar");
+  avatarEl.setAttribute("src", person.image);
+  divEl.appendChild(avatarEl);
+
+  const nameEl = document.createElement("p");
+  nameEl.classList.add("comment-section__name");
+  nameEl.innerText = person.name;
+  divEl.appendChild(nameEl);
+
+  const dateEl = document.createElement("p");
+  dateEl.classList.add("comment-section__date");
+  dateEl.innerText = person.date;
+  divEl.appendChild(dateEl);
+
+  const textEl = document.createElement("p");
+  textEl.classList.add("comment-section__text");
+  textEl.innerText = person.comment;
+  containerEl.appendChild(textEl);
+}
+
 for (let i = commentBox.length - 1; i < commentBox.length; i--) {
-  function displayComment(person) {
-    containerEl.classList.add("comment-section__container");
-    sectionEl.appendChild(containerEl);
-
-    const divEl = document.createElement("div");
-    divEl.classList.add("comment-section__div");
-    containerEl.appendChild(divEl);
-
-    const avatarEl = document.createElement("img");
-    avatarEl.classList.add("comment-section__avatar");
-    avatarEl.setAttribute("src", person.image);
-    divEl.appendChild(avatarEl);
-
-    const nameEl = document.createElement("p");
-    nameEl.classList.add("comment-section__name");
-    nameEl.innerText = person.name;
-    divEl.appendChild(nameEl);
-
-    const dateEl = document.createElement("p");
-    dateEl.classList.add("comment-section__date");
-    dateEl.innerText = person.date;
-    divEl.appendChild(dateEl);
-
-    const textEl = document.createElement("p");
-    textEl.classList.add("comment-section__text");
-    textEl.innerText = person.comment;
-    containerEl.appendChild(textEl);
-  }
-
   const newComment = displayComment(commentBox[i]);
 }

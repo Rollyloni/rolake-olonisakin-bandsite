@@ -1,0 +1,109 @@
+@import "./partials/typography";
+@import "./partials/footer";
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+$primary-color: #323232;
+$secondary-color: #fff;
+
+html {
+  font-family: "AvenirNext LT Pro";
+}
+
+header,
+footer {
+  background-color: $primary-color;
+}
+
+header {
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-logo__image {
+  width: 7.5rem;
+  height: 1.2rem;
+  margin: 1.5rem 0;
+
+  @include tablet {
+    margin: 2rem 4rem;
+  }
+
+  @include desktop {
+    margin: 2rem 8rem;
+    margin-right: 4rem;
+  }
+}
+
+.site-logo__link {
+  display: flex;
+  justify-content: center;
+}
+
+a.navigation-section__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  &.bold {
+    font-weight: bold;
+  }
+
+  @include tablet {
+    padding-left: 3rem;
+  }
+}
+
+.navigation-section__list {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  justify-content: space-around;
+}
+
+.nav__styling {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 30px;
+
+  @include tablet {
+    padding-bottom: 1.7rem;
+    padding-right: 5rem;
+    width: 30%;
+  }
+
+  &.active {
+    border-bottom: 4px solid white;
+  }
+}
+
+.hero-section {
+  background-image: url("../assets/images/hero-shows.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+}
+iframe {
+  margin: 4rem;
+  width: 60%;
+}

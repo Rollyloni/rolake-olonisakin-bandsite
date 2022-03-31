@@ -228,12 +228,50 @@ a.navigation-section__link {
   color: #afafaf;
   font-size: 1.2rem;
   margin: 1rem 0;
-  margin-left: 4rem;
+  margin-left: 3rem;
 }
+
 input {
   width: 80%;
-  height: 20rem;
-  border-radius: 1rem;
+  height: 3rem;
+  border-radius: 0.5rem;
   border-color: #afafaf;
-  margin-left: 4rem;
+  padding: 2rem 1rem;
+  background-color: #fafafa;
+  font-family: "AvenirNext LT Pro";
+  font-size: 1.5rem;
+  color: black;
+  margin-left: 3rem;
+}
+
+textarea {
+  width: 80%;
+  height: 12rem;
+  border-radius: 0.5rem;
+  border-color: #afafaf;
+  padding: 1rem 1rem;
+  font-family: "AvenirNext LT Pro";
+  font-size: 1.5rem;
+  color: black;
+  margin-left: 3rem;
+}
+label {
+  display: block;
+}
+button {
+  display: block;
+  width: 80%;
+  padding: 1.5rem 0;
+  font-family: "AvenirNext LT Pro";
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  background-color: #323232;
+  border-color: #323232;
+  border-radius: 0.5rem;
+  margin: 1.5rem 3rem;
+}
+
+form {
+  border-bottom: 2px solid #e1e1e1;
 }
