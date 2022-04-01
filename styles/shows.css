@@ -294,11 +294,67 @@ a.navigation-section__link.bold {
   background-image: url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
-  height: 70vh;
+  height: 100vh;
 }
 
 iframe {
   margin: 4rem;
-  width: 60%;
+  margin-left: 1.5rem;
+  height: 9rem;
+  width: 90%;
+}
+
+.ticket-section__heading {
+  font-size: 2.5rem;
+  margin: 3rem 1.5rem;
+}
+
+.ticket-section__title {
+  margin: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #afafaf;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ticket-section__venue,
+.ticket-section__location,
+.ticket-section__date {
+  font-size: 1.4rem;
+  margin: 0.8rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-section__date {
+  font-weight: 700;
+}
+
+.ticket-section__container {
+  border-bottom: 2px solid #e1e1e1;
+  margin-bottom: 2.2rem;
+}
+
+button {
+  width: 90%;
+  padding: 1.2rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #323232;
+  border-color: #323232;
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+}
+
+.hero-section__title {
+  color: #fff;
+  padding: 3rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.hero-section__heading {
+  color: #fff;
+  width: 70%;
+  font-size: 2.5rem;
+  padding-left: 1.5rem;
 }
 /*# sourceMappingURL=shows.css.map */

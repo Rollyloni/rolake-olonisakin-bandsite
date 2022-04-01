@@ -1,10 +1,10 @@
 let commentBox = [
   {
-    image: "assets/images/photo-gallery-3.jpg",
-    name: "Miles Acosta",
-    date: "12/20/2020",
+    image: "assets/images/photo-gallery-1.jpg",
+    name: "Connor Walton",
+    date: "02/17/2021",
     comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
 
   {
@@ -16,11 +16,11 @@ let commentBox = [
   },
 
   {
-    image: "assets/images/photo-gallery-1.jpg",
-    name: "Connor Walton",
-    date: "02/17/2021",
+    image: "assets/images/photo-gallery-3.jpg",
+    name: "Miles Acosta",
+    date: "12/20/2020",
     comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
 ];
 
@@ -105,6 +105,6 @@ function displayComment(person) {
   containerEl.appendChild(textEl);
 }
 
-for (let i = commentBox.length - 1; i < commentBox.length; i--) {
+for (let i = 0; i < commentBox.length; i++) {
   const newComment = displayComment(commentBox[i]);
 }
