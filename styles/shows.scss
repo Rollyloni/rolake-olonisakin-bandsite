@@ -98,7 +98,8 @@ a.navigation-section__link {
 }
 
 .hero-section {
-  background-image: url("../assets/images/hero-shows.jpg");
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5)),
+    url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -160,4 +161,11 @@ button {
   width: 70%;
   font-size: 2.5rem;
   padding-left: 1.5rem;
+}
+
+.ticket-section__container:hover {
+  background-color: #fafafa;
+}
+.ticket-section__container:active {
+  background-color: #e1e1e1;
 }

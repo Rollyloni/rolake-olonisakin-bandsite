@@ -1,6 +1,6 @@
 let commentBox = [
   {
-    image: "assets/images/photo-gallery-1.jpg",
+    image: "./assets/images/photo-gallery-1.jpg",
     name: "Connor Walton",
     date: "02/17/2021",
     comment:
@@ -8,7 +8,7 @@ let commentBox = [
   },
 
   {
-    image: "assets/images/photo-gallery-2.jpg",
+    image: "./assets/images/photo-gallery-2.jpg",
     name: "Emilie Beach",
     date: "01/09/2021",
     comment:
@@ -16,7 +16,7 @@ let commentBox = [
   },
 
   {
-    image: "assets/images/photo-gallery-3.jpg",
+    image: "./assets/images/photo-gallery-3.jpg",
     name: "Miles Acosta",
     date: "12/20/2020",
     comment:
@@ -41,7 +41,7 @@ sectionEl.appendChild(formEl);
 
 const avatarEl = document.createElement("img");
 avatarEl.classList.add("comment-section__avatar");
-avatarEl.setAttribute("src", "assets/images/mohan-muruge.jpg");
+avatarEl.setAttribute("src", "./assets/images/mohan-muruge.jpg");
 formEl.appendChild(avatarEl);
 
 const inputNameEl = document.createElement("label");
@@ -74,6 +74,8 @@ buttonEl.setAttribute("href", "index.html");
 formEl.appendChild(buttonEl);
 
 //Would be a function
+
+//Function to create a new comment
 const containerEl = document.createElement("article");
 
 function displayComment(person) {
@@ -86,8 +88,13 @@ function displayComment(person) {
 
   const avatarEl = document.createElement("img");
   avatarEl.classList.add("comment-section__avatar");
+  avatarEl.setAttribute("name", "avatar");
   avatarEl.setAttribute("src", person.image);
   divEl.appendChild(avatarEl);
+
+  const nameDivEl = document.createElement("div");
+  nameDivEl.classList.add("comment-section__name--div");
+  containerEl.appendChild(nameDivEl);
 
   const nameEl = document.createElement("p");
   nameEl.classList.add("comment-section__name");
@@ -105,6 +112,49 @@ function displayComment(person) {
   containerEl.appendChild(textEl);
 }
 
+//Loop for generationg comments
+
 for (let i = 0; i < commentBox.length; i++) {
   const newComment = displayComment(commentBox[i]);
 }
+
+// Event listener for form submission
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formEl = event.target;
+
+  const nameInput = event.target.fullName.value;
+  console.log(nameInput);
+
+  const imgInput = "./assets/images/mohan-muruge.jpg";
+  console.log(imgInput);
+
+  const typeCommentInput = event.target.comment.value;
+  console.log(typeCommentInput);
+
+  console.log(new Date());
+
+  console.log(commentBox);
+
+  //Error state
+
+  if (nameInput == "" || typeCommentEl == "") {
+    inputEl.style.borderColor = "red";
+    typeCommentEl.style.borderColor = "red";
+    alert("Please complete all required fields");
+    return;
+  }
+
+  //New comment creator that pushes comment unto the screen
+
+  commentBox.unshift({
+    image: imgInput,
+    name: nameInput,
+    date: new Date(),
+    comment: typeCommentInput,
+  });
+  displayComment(commentBox[0]);
+
+  event.target.reset();
+});

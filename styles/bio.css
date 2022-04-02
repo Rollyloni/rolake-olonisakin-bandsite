@@ -247,6 +247,18 @@ small {
   padding: 0rem 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .comment-section {
+    margin: 0rem 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .comment-section {
+    margin: 0rem 12rem;
+  }
+}
+
 .comment-section__div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,8 +271,21 @@ small {
   font-size: 2.4rem;
 }
 
+@media (min-width: 768px) {
+  .comment-section__header {
+    font-size: 2.8rem;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .comment-section__header {
+    font-size: 3.2rem;
+    padding-left: 0;
+  }
+}
+
 .comment-section__avatar {
-  vertical-align: middle;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -268,8 +293,8 @@ small {
 
 .comment-section__name {
   font-weight: bold;
-  font-size: 1.3rem;
-  line-height: 1.8rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   padding-left: 1rem;
 }
 
@@ -278,6 +303,18 @@ small {
   font-size: 1.3rem;
   line-height: 1.8rem;
   margin-left: 11.6rem;
+}
+
+@media (min-width: 768px) {
+  .comment-section__date {
+    margin-left: 17rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .comment-section__date {
+    margin-left: 31rem;
+  }
 }
 
 .comment-section__text {
@@ -392,7 +429,8 @@ a.navigation-section__link.bold {
 }
 
 .hero-section {
-  background-image: url("../assets/images/hero-bio.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5))), url("../assets/images/hero-bio.jpg");
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   height: 70vh;
@@ -562,6 +600,13 @@ input {
   margin-left: 3rem;
 }
 
+@media (min-width: 768px) {
+  input {
+    width: 90%;
+    height: 2.5rem;
+  }
+}
+
 textarea {
   width: 80%;
   height: 12rem;
@@ -572,6 +617,13 @@ textarea {
   font-size: 1.5rem;
   color: black;
   margin-left: 3rem;
+}
+
+@media (min-width: 768px) {
+  textarea {
+    width: 90%;
+    height: 10rem;
+  }
 }
 
 label {
@@ -590,6 +642,21 @@ button {
   border-color: #323232;
   border-radius: 0.5rem;
   margin: 1.5rem 3rem;
+}
+
+@media (min-width: 768px) {
+  button {
+    width: 30%;
+    padding: 0.7rem 2rem;
+    font-size: 1.3rem;
+    margin-left: 23.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  button {
+    margin-left: 32.8rem;
+  }
 }
 
 form {

@@ -26,6 +26,7 @@ const showsArray = [
 ];
 
 const ticketEl = document.querySelector(".ticket-section");
+const ticketDivEl = document.createElement("article");
 
 const ticketHeaderEl = document.createElement("h1");
 ticketHeaderEl.classList.add("ticket-section__heading");

@@ -1,6 +1,14 @@
 .comment-section {
   padding: 0rem 1.5rem;
 
+  @include tablet {
+    margin: 0rem 5rem;
+  }
+
+  @include desktop {
+    margin: 0rem 12rem;
+  }
+
   &__div {
     display: flex;
   }
@@ -9,10 +17,19 @@
     padding: 2rem 0;
     padding-left: 1rem;
     font-size: 2.4rem;
+
+    @include tablet {
+      font-size: 2.8rem;
+      padding-left: 0;
+    }
+
+    @include desktop {
+      font-size: 3.2rem;
+      padding-left: 0;
+    }
   }
 
   &__avatar {
-    vertical-align: middle;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -20,8 +37,8 @@
 
   &__name {
     font-weight: bold;
-    font-size: 1.3rem;
-    line-height: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
     padding-left: 1rem;
   }
 
@@ -30,6 +47,14 @@
     font-size: 1.3rem;
     line-height: 1.8rem;
     margin-left: 11.6rem;
+
+    @include tablet {
+      margin-left: 17rem;
+    }
+
+    @include desktop {
+      margin-left: 31rem;
+    }
   }
 
   &__text {
