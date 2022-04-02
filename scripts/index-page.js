@@ -1,4 +1,4 @@
-let commentBox = [
+const commentBox = [
   {
     image: "./assets/images/photo-gallery-1.jpg",
     name: "Connor Walton",
@@ -154,7 +154,7 @@ formEl.addEventListener("submit", (event) => {
     date: new Date(),
     comment: typeCommentInput,
   });
-  displayComment(commentBox[0]);
 
+  displayComment(commentBox[0]);
   event.target.reset();
 });

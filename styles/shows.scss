@@ -1,5 +1,5 @@
-@import "./partials/typography";
-@import "./partials/footer";
+@use "./partials/typography";
+@use "./partials/footer";
 
 @mixin tablet {
   @media (min-width: 768px) {
@@ -98,22 +98,87 @@ a.navigation-section__link {
 }
 
 .hero-section {
-  background-image: linear-gradient(rgba(50, 50, 50, 0.5)),
+  background-image:
+  //  linear-gradient(rgba(50, 50, 50, 0.5)),
     url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
+  vertical-align: middle;
+
+  @include tablet {
+    height: 120vh;
+  }
 }
 iframe {
   margin: 4rem;
   margin-left: 1.5rem;
   height: 9rem;
   width: 90%;
+
+  @include tablet {
+    width: 60%;
+    height: 11rem;
+    margin-left: 4rem;
+  }
+
+  @include desktop {
+    width: 40%;
+    height: 10rem;
+  }
+}
+
+.hero-section__title {
+  color: #fff;
+  padding: 3rem 1.5rem;
+  font-size: 1.5rem;
+
+  @include tablet {
+    font-weight: 700;
+    font-size: 2.4rem;
+    padding-left: 4rem;
+  }
+
+  @include desktop {
+    margin-left: 4rem;
+    padding-bottom: 0;
+    padding-top: 14rem;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}
+
+.hero-section__heading {
+  color: #fff;
+  width: 70%;
+  font-size: 2.5rem;
+  padding-left: 1.5rem;
+
+  @include tablet {
+    font-size: 4rem;
+    padding-left: 4rem;
+  }
+
+  @include desktop {
+    width: 50%;
+    font-size: 4.2rem;
+  }
 }
 
 .ticket-section__heading {
   font-size: 2.5rem;
   margin: 3rem 1.5rem;
+
+  @include tablet {
+    font-size: 3.2rem;
+    margin-left: 2.5rem;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    padding-left: 4rem;
+    padding-top: 1.8rem;
+  }
 }
 
 .ticket-section__title {
@@ -122,6 +187,10 @@ iframe {
   color: #afafaf;
   font-size: 1rem;
   font-weight: 600;
+
+  @include tablet {
+    display: none;
+  }
 }
 .ticket-section__venue,
 .ticket-section__location,
@@ -129,6 +198,10 @@ iframe {
   font-size: 1.4rem;
   margin: 0.8rem 1.5rem;
   margin-bottom: 1.5rem;
+
+  @include desktop {
+    font-size: 1.2rem;
+  }
 }
 .ticket-section__date {
   font-weight: 700;
@@ -137,6 +210,19 @@ iframe {
 .ticket-section__container {
   border-bottom: 2px solid #e1e1e1;
   margin-bottom: 2.2rem;
+
+  @include tablet {
+    margin: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  @include desktop {
+    margin: 2rem 0;
+    margin-left: 25rem;
+    margin-right: 8rem;
+  }
 }
 
 button {
@@ -148,19 +234,12 @@ button {
   border-color: #323232;
   border-radius: 0.5rem;
   margin: 1.5rem;
-}
 
-.hero-section__title {
-  color: #fff;
-  padding: 3rem 1.5rem;
-  font-size: 1.5rem;
-}
-
-.hero-section__heading {
-  color: #fff;
-  width: 70%;
-  font-size: 2.5rem;
-  padding-left: 1.5rem;
+  @include tablet {
+    width: 25%;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+  }
 }
 
 .ticket-section__container:hover {
@@ -168,4 +247,27 @@ button {
 }
 .ticket-section__container:active {
   background-color: #e1e1e1;
+}
+.show {
+  @include tablet {
+    display: inline-block;
+    margin-right: 9rem;
+    padding-left: 1.5rem;
+  }
+}
+.venue {
+  margin-right: 4rem;
+}
+.date {
+  @include desktop {
+    margin-left: 25rem;
+  }
+}
+
+.hero-section__heading--div {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    margin: 0 4rem;
+  }
 }

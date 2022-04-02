@@ -33,6 +33,21 @@ ticketHeaderEl.classList.add("ticket-section__heading");
 ticketHeaderEl.innerText = "Shows";
 ticketEl.appendChild(ticketHeaderEl);
 
+const newDateTitleEl = document.createElement("p");
+newDateTitleEl.classList.add("ticket-section__title", "show", "date");
+newDateTitleEl.innerText = "DATE";
+ticketEl.appendChild(newDateTitleEl);
+
+const venueTitleEl = document.createElement("p");
+venueTitleEl.classList.add("ticket-section__title", "show", "venue");
+venueTitleEl.innerText = "VENUE";
+ticketEl.appendChild(venueTitleEl);
+
+const locationTitleEl = document.createElement("p");
+locationTitleEl.classList.add("ticket-section__title", "show");
+locationTitleEl.innerText = "LOCATION";
+ticketEl.appendChild(locationTitleEl);
+
 //Funtion to create each ticket card
 function createTicket(ticket) {
   const ticketDivEl = document.createElement("article");
