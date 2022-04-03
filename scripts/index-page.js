@@ -148,13 +148,22 @@ formEl.addEventListener("submit", (event) => {
 
   //New comment creator that pushes comment unto the screen
 
-  commentBox.unshift({
+  commentBox.push({
     image: imgInput,
     name: nameInput,
     date: new Date(),
     comment: typeCommentInput,
   });
 
-  displayComment(commentBox[0]);
+  //Cteated a loop that clears the default comments after submission
+  //The second loop re-renders the comments without the most recent one
+  for (let i = 0; i < commentBox.length; i++) {
+    containerEl.innerHTML = "";
+    const newComment = displayComment(commentBox[i]);
+
+    for (let i = 0; i < commentBox.length - 1; i++) {
+      const newComment = displayComment(commentBox[i]);
+    }
+  }
   event.target.reset();
 });

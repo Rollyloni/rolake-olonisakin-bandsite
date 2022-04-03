@@ -19,6 +19,90 @@
   font-style: normal;
   font-display: swap;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "AvenirNext LT Pro";
+}
+
+header,
+footer {
+  background-color: #323232;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-logo__image {
+  width: 7.5rem;
+  height: 1.2rem;
+  margin: 1.5rem 0;
+}
+@media (min-width: 768px) {
+  .site-logo__image {
+    margin: 2rem 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .site-logo__image {
+    margin: 2rem 8rem;
+    margin-right: 4rem;
+  }
+}
+
+.site-logo__link {
+  display: flex;
+  justify-content: center;
+}
+
+a.navigation-section__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+a.navigation-section__link.bold {
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  a.navigation-section__link {
+    padding-left: 3rem;
+  }
+}
+
+.navigation-section__list {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  justify-content: space-around;
+}
+
+.nav__styling {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .nav__styling {
+    padding-bottom: 1.7rem;
+    padding-right: 5rem;
+    width: 30%;
+  }
+}
+.nav__styling.active {
+  border-bottom: 4px solid white;
+}
+
 footer {
   position: relative;
   padding: 0 1.5rem;
@@ -39,6 +123,15 @@ footer {
   font-size: 1.2rem;
   line-height: 1.6rem;
   padding: 0;
+}
+.footer-section__instagram {
+  width: 2.5rem;
+}
+.footer-section__facebook {
+  width: 1.6rem;
+}
+.footer-section__twitter {
+  width: 2.8rem;
 }
 .footer-section__heading {
   font-size: 2rem;
@@ -156,204 +249,6 @@ small {
   }
 }
 
-.gallery-section {
-  background-color: #fafafa;
-}
-@media (min-width: 768px) {
-  .gallery-section {
-    padding: 1.5rem;
-  }
-}
-@media (min-width: 1280px) {
-  .gallery-section {
-    padding: 1.5rem 8rem;
-  }
-}
-@media (min-width: 768px) {
-  .gallery-section .gallery-section__container {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 33%;
-    margin-bottom: 1rem;
-  }
-}
-.gallery-section__image {
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  padding: 0.6rem 1.5rem;
-}
-@media (min-width: 768px) {
-  .gallery-section__image {
-    padding: 0.6rem 1rem;
-  }
-}
-.gallery-section__heading {
-  padding: 1rem 1.5rem;
-  padding-bottom: 0;
-  font-size: 2.2rem;
-}
-@media (min-width: 768px) {
-  .gallery-section__heading {
-    font-size: 2.8rem;
-    padding: 2rem 1rem;
-    font-size: 2.8rem;
-  }
-}
-
-.comment-section {
-  padding: 0rem 1.5rem;
-}
-@media (min-width: 768px) {
-  .comment-section {
-    margin: 0rem 5rem;
-  }
-}
-@media (min-width: 1280px) {
-  .comment-section {
-    margin: 0rem 12rem;
-  }
-}
-.comment-section__div {
-  display: flex;
-}
-.comment-section__header {
-  padding: 2rem 0;
-  padding-left: 1rem;
-  font-size: 2.4rem;
-}
-@media (min-width: 768px) {
-  .comment-section__header {
-    font-size: 2.8rem;
-    padding-left: 0;
-  }
-}
-@media (min-width: 1280px) {
-  .comment-section__header {
-    font-size: 3.2rem;
-    padding-left: 0;
-  }
-}
-.comment-section__avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.comment-section__name {
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  padding-left: 1rem;
-}
-.comment-section__date {
-  color: #afafaf;
-  font-size: 1.3rem;
-  line-height: 1.8rem;
-  margin-left: 11.6rem;
-}
-@media (min-width: 768px) {
-  .comment-section__date {
-    margin-left: 17rem;
-  }
-}
-@media (min-width: 1280px) {
-  .comment-section__date {
-    margin-left: 31rem;
-  }
-}
-.comment-section__text {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  margin-bottom: 2rem;
-  padding-left: 4rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #e1e1e1;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html {
-  font-family: "AvenirNext LT Pro";
-}
-
-header,
-footer {
-  background-color: #323232;
-}
-
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.site-logo__image {
-  width: 7.5rem;
-  height: 1.2rem;
-  margin: 1.5rem 0;
-}
-@media (min-width: 768px) {
-  .site-logo__image {
-    margin: 2rem 4rem;
-  }
-}
-@media (min-width: 1280px) {
-  .site-logo__image {
-    margin: 2rem 8rem;
-    margin-right: 4rem;
-  }
-}
-
-.site-logo__link {
-  display: flex;
-  justify-content: center;
-}
-
-a.navigation-section__link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  list-style: none;
-}
-a.navigation-section__link.bold {
-  font-weight: bold;
-}
-@media (min-width: 768px) {
-  a.navigation-section__link {
-    padding-left: 3rem;
-  }
-}
-
-.navigation-section__list {
-  display: flex;
-  padding: 0;
-  margin-bottom: 0;
-  justify-content: space-around;
-}
-
-.nav__styling {
-  width: 50%;
-  text-align: center;
-  padding-bottom: 30px;
-}
-@media (min-width: 768px) {
-  .nav__styling {
-    padding-bottom: 1.7rem;
-    padding-right: 5rem;
-    width: 30%;
-  }
-}
-.nav__styling.active {
-  border-bottom: 4px solid white;
-}
-
 .hero-section {
   background-image: url("../assets/images/hero-bio.jpg");
   background-position: center;
@@ -363,7 +258,7 @@ a.navigation-section__link.bold {
 }
 @media (min-width: 768px) {
   .hero-section {
-    height: 120vh;
+    height: 90vh;
   }
 }
 .hero-section__heading {
@@ -484,6 +379,10 @@ a.navigation-section__link.bold {
   }
 }
 
+form {
+  border-bottom: 2px solid #e1e1e1;
+}
+
 .form__name,
 .form__comment {
   color: #afafaf;
@@ -492,17 +391,21 @@ a.navigation-section__link.bold {
   margin-left: 3rem;
 }
 
-input {
+input,
+textarea {
   width: 80%;
-  height: 3rem;
   border-radius: 0.5rem;
   border-color: #afafaf;
-  padding: 2rem 1rem;
   background-color: #fafafa;
   font-family: "AvenirNext LT Pro";
   font-size: 1.5rem;
   color: black;
   margin-left: 3rem;
+}
+
+input {
+  height: 3rem;
+  padding: 2rem 1rem;
 }
 @media (min-width: 768px) {
   input {
@@ -512,15 +415,8 @@ input {
 }
 
 textarea {
-  width: 80%;
   height: 12rem;
-  border-radius: 0.5rem;
-  border-color: #afafaf;
   padding: 1rem 1rem;
-  font-family: "AvenirNext LT Pro";
-  font-size: 1.5rem;
-  color: black;
-  margin-left: 3rem;
 }
 @media (min-width: 768px) {
   textarea {
@@ -560,6 +456,117 @@ button {
   }
 }
 
-form {
+.comment-section {
+  padding: 0rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .comment-section {
+    margin: 0rem 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-section {
+    margin: 0rem 12rem;
+  }
+}
+.comment-section__div {
+  display: flex;
+}
+.comment-section__header {
+  padding: 2rem 0;
+  padding-left: 1rem;
+  font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+  .comment-section__header {
+    font-size: 2.8rem;
+    padding-left: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-section__header {
+    font-size: 3.2rem;
+    padding-left: 0;
+  }
+}
+.comment-section__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.comment-section__name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding-left: 1rem;
+}
+.comment-section__date {
+  color: #afafaf;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-left: 11.6rem;
+}
+@media (min-width: 768px) {
+  .comment-section__date {
+    margin-left: 17rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-section__date {
+    margin-left: 31rem;
+  }
+}
+.comment-section__text {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
   border-bottom: 2px solid #e1e1e1;
+}
+
+.gallery-section {
+  background-color: #fafafa;
+}
+@media (min-width: 768px) {
+  .gallery-section {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery-section {
+    padding: 1.5rem 8rem;
+  }
+}
+@media (min-width: 768px) {
+  .gallery-section .gallery-section__container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 33%;
+    margin-bottom: 1rem;
+  }
+}
+.gallery-section__image {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0.6rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .gallery-section__image {
+    padding: 0.6rem 1rem;
+  }
+}
+.gallery-section__heading {
+  padding: 1rem 1.5rem;
+  padding-bottom: 0;
+  font-size: 2.2rem;
+}
+@media (min-width: 768px) {
+  .gallery-section__heading {
+    font-size: 2.8rem;
+    padding: 2rem 1rem;
+    font-size: 2.8rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

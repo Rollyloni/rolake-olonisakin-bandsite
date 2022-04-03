@@ -1,7 +1,5 @@
 @use "./partials/typography";
-@use "./partials/footer";
-@use "./partials/gallery";
-@use "./partials/comment";
+@use "./partials/global";
 
 @mixin tablet {
   @media (min-width: 768px) {
@@ -15,90 +13,10 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 $primary-color: #323232;
 $secondary-color: #fff;
 
-html {
-  font-family: "AvenirNext LT Pro";
-}
-
-header,
-footer {
-  background-color: $primary-color;
-}
-
-header {
-  @include tablet {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.site-logo__image {
-  width: 7.5rem;
-  height: 1.2rem;
-  margin: 1.5rem 0;
-
-  @include tablet {
-    margin: 2rem 4rem;
-  }
-
-  @include desktop {
-    margin: 2rem 8rem;
-    margin-right: 4rem;
-  }
-}
-
-.site-logo__link {
-  display: flex;
-  justify-content: center;
-}
-
-a.navigation-section__link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  list-style: none;
-  &.bold {
-    font-weight: bold;
-  }
-
-  @include tablet {
-    padding-left: 3rem;
-  }
-}
-
-.navigation-section__list {
-  display: flex;
-  padding: 0;
-  margin-bottom: 0;
-  justify-content: space-around;
-}
-
-.nav__styling {
-  width: 50%;
-  text-align: center;
-  padding-bottom: 30px;
-
-  @include tablet {
-    padding-bottom: 1.7rem;
-    padding-right: 5rem;
-    width: 30%;
-  }
-
-  &.active {
-    border-bottom: 4px solid white;
-  }
-}
-
+//Hero section
 .hero-section {
   background-image: 
   // linear-gradient(rgba(50, 50, 50, 0.5)),
@@ -109,7 +27,7 @@ a.navigation-section__link {
   vertical-align: middle;
 
   @include tablet {
-    height: 120vh;
+    height: 90vh;
   }
 
   &__heading {
@@ -133,6 +51,7 @@ a.navigation-section__link {
   }
 }
 
+//Section with write-up about the band
 .about-section {
   &__image {
     margin: 0 auto;
@@ -183,6 +102,7 @@ a.navigation-section__link {
   }
 }
 
+//The Bees Knees paragraph Section
 .text-section {
   &__heading {
     padding: 1.5rem;
@@ -226,6 +146,12 @@ a.navigation-section__link {
   }
 }
 
+//Form Input Section
+
+form {
+  border-bottom: 2px solid #e1e1e1;
+}
+
 .form__name,
 .form__comment {
   color: #afafaf;
@@ -234,17 +160,21 @@ a.navigation-section__link {
   margin-left: 3rem;
 }
 
-input {
+input,
+textarea {
   width: 80%;
-  height: 3rem;
   border-radius: 0.5rem;
   border-color: #afafaf;
-  padding: 2rem 1rem;
   background-color: #fafafa;
   font-family: "AvenirNext LT Pro";
   font-size: 1.5rem;
   color: black;
   margin-left: 3rem;
+}
+
+input {
+  height: 3rem;
+  padding: 2rem 1rem;
 
   @include tablet {
     width: 90%;
@@ -253,24 +183,19 @@ input {
 }
 
 textarea {
-  width: 80%;
   height: 12rem;
-  border-radius: 0.5rem;
-  border-color: #afafaf;
   padding: 1rem 1rem;
-  font-family: "AvenirNext LT Pro";
-  font-size: 1.5rem;
-  color: black;
-  margin-left: 3rem;
 
   @include tablet {
     width: 90%;
     height: 10rem;
   }
 }
+
 label {
   display: block;
 }
+
 button {
   display: block;
   width: 80%;
@@ -296,6 +221,120 @@ button {
   }
 }
 
-form {
-  border-bottom: 2px solid #e1e1e1;
+//Comment section
+
+.comment-section {
+  padding: 0rem 1.5rem;
+
+  @include tablet {
+    margin: 0rem 5rem;
+  }
+
+  @include desktop {
+    margin: 0rem 12rem;
+  }
+
+  &__div {
+    display: flex;
+  }
+
+  &__header {
+    padding: 2rem 0;
+    padding-left: 1rem;
+    font-size: 2.4rem;
+
+    @include tablet {
+      font-size: 2.8rem;
+      padding-left: 0;
+    }
+
+    @include desktop {
+      font-size: 3.2rem;
+      padding-left: 0;
+    }
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding-left: 1rem;
+  }
+
+  &__date {
+    color: #afafaf;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-left: 11.6rem;
+
+    @include tablet {
+      margin-left: 17rem;
+    }
+
+    @include desktop {
+      margin-left: 31rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e1e1e1;
+  }
+}
+
+//Gallery Section
+
+.gallery-section {
+  background-color: #fafafa;
+
+  @include tablet {
+    padding: 1.5rem;
+  }
+
+  @include desktop {
+    padding: 1.5rem 8rem;
+  }
+
+  .gallery-section__container {
+    @include tablet {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 33%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0.6rem 1.5rem;
+
+    @include tablet {
+      padding: 0.6rem 1rem;
+    }
+  }
+
+  &__heading {
+    padding: 1rem 1.5rem;
+    padding-bottom: 0;
+    font-size: 2.2rem;
+
+    @include tablet {
+      font-size: 2.8rem;
+      padding: 2rem 1rem;
+      font-size: 2.8rem;
+    }
+  }
 }

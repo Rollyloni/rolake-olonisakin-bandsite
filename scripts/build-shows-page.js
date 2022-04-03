@@ -33,6 +33,7 @@ ticketHeaderEl.classList.add("ticket-section__heading");
 ticketHeaderEl.innerText = "Shows";
 ticketEl.appendChild(ticketHeaderEl);
 
+//Created a hidden section for media Query
 const newDateTitleEl = document.createElement("p");
 newDateTitleEl.classList.add("ticket-section__title", "show", "date");
 newDateTitleEl.innerText = "DATE";

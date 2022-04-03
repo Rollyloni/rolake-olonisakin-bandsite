@@ -1,5 +1,5 @@
 @use "./partials/typography";
-@use "./partials/footer";
+@use "./partials/global";
 
 @mixin tablet {
   @media (min-width: 768px) {
@@ -13,103 +13,67 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-$primary-color: #323232;
-$secondary-color: #fff;
-
-html {
-  font-family: "AvenirNext LT Pro";
-}
-
-header,
-footer {
-  background-color: $primary-color;
-}
-
-header {
-  @include tablet {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.site-logo__image {
-  width: 7.5rem;
-  height: 1.2rem;
-  margin: 1.5rem 0;
-
-  @include tablet {
-    margin: 2rem 4rem;
-  }
-
-  @include desktop {
-    margin: 2rem 8rem;
-    margin-right: 4rem;
-  }
-}
-
-.site-logo__link {
-  display: flex;
-  justify-content: center;
-}
-
-a.navigation-section__link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  list-style: none;
-  &.bold {
-    font-weight: bold;
-  }
-
-  @include tablet {
-    padding-left: 3rem;
-  }
-}
-
-.navigation-section__list {
-  display: flex;
-  padding: 0;
-  margin-bottom: 0;
-  justify-content: space-around;
-}
-
-.nav__styling {
-  width: 50%;
-  text-align: center;
-  padding-bottom: 30px;
-
-  @include tablet {
-    padding-bottom: 1.7rem;
-    padding-right: 5rem;
-    width: 30%;
-  }
-
-  &.active {
-    border-bottom: 4px solid white;
-  }
-}
-
 .hero-section {
   background-image:
   //  linear-gradient(rgba(50, 50, 50, 0.5)),
     url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
   vertical-align: middle;
 
   @include tablet {
-    height: 120vh;
+    height: 80vh;
+  }
+
+  &__title {
+    color: #fff;
+    padding: 3rem 1.5rem;
+    font-size: 1.5rem;
+
+    @include tablet {
+      font-weight: 600;
+      font-size: 2.2rem;
+      padding-bottom: 1rem;
+      padding-left: 4rem;
+      padding-top: 5rem;
+    }
+
+    @include desktop {
+      margin-left: 4rem;
+      padding-bottom: 0;
+      padding-top: 14rem;
+      font-weight: 400;
+      font-size: 2rem;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    width: 70%;
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+
+    @include tablet {
+      font-size: 4.4rem;
+      padding-left: 4rem;
+    }
+
+    @include desktop {
+      width: 50%;
+      font-size: 4.2rem;
+    }
+  }
+
+  &__heading--div {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      margin: 0 4rem;
+    }
   }
 }
+
 iframe {
   margin: 4rem;
   margin-left: 1.5rem;
@@ -128,70 +92,68 @@ iframe {
   }
 }
 
-.hero-section__title {
-  color: #fff;
-  padding: 3rem 1.5rem;
-  font-size: 1.5rem;
+//Ticket Section
 
-  @include tablet {
+.ticket-section {
+  &__heading {
+    font-size: 2.5rem;
+    margin: 3rem 1.5rem;
+
+    @include tablet {
+      font-size: 3.2rem;
+      margin-left: 2.5rem;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+      padding-left: 4rem;
+      padding-top: 1.8rem;
+    }
+  }
+
+  &__title {
+    margin: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #afafaf;
+    font-size: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__date {
     font-weight: 700;
-    font-size: 2.4rem;
-    padding-left: 4rem;
   }
 
-  @include desktop {
-    margin-left: 4rem;
-    padding-bottom: 0;
-    padding-top: 14rem;
-    font-weight: 400;
-    font-size: 2rem;
-  }
-}
+  &__container {
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 2.2rem;
 
-.hero-section__heading {
-  color: #fff;
-  width: 70%;
-  font-size: 2.5rem;
-  padding-left: 1.5rem;
+    @include tablet {
+      margin: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
 
-  @include tablet {
-    font-size: 4rem;
-    padding-left: 4rem;
+    @include desktop {
+      margin: 2rem 0;
+      margin-left: 25rem;
+      margin-right: 8rem;
+    }
   }
 
-  @include desktop {
-    width: 50%;
-    font-size: 4.2rem;
-  }
-}
-
-.ticket-section__heading {
-  font-size: 2.5rem;
-  margin: 3rem 1.5rem;
-
-  @include tablet {
-    font-size: 3.2rem;
-    margin-left: 2.5rem;
+  &__container:hover {
+    background-color: #fafafa;
   }
 
-  @include desktop {
-    margin-bottom: 0;
-    padding-left: 4rem;
-    padding-top: 1.8rem;
+  &__container:active {
+    background-color: #e1e1e1;
   }
 }
 
-.ticket-section__title {
-  margin: 1rem 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #afafaf;
-  font-size: 1rem;
-  font-weight: 600;
-
-  @include tablet {
-    display: none;
-  }
-}
 .ticket-section__venue,
 .ticket-section__location,
 .ticket-section__date {
@@ -203,25 +165,22 @@ iframe {
     font-size: 1.2rem;
   }
 }
-.ticket-section__date {
-  font-weight: 700;
-}
 
-.ticket-section__container {
-  border-bottom: 2px solid #e1e1e1;
-  margin-bottom: 2.2rem;
+.show {
+  display: none;
 
   @include tablet {
-    margin: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    display: inline-block;
+    margin-right: 9rem;
+    padding-left: 1.5rem;
   }
-
+}
+.venue {
+  margin-right: 4rem;
+}
+.date {
   @include desktop {
-    margin: 2rem 0;
     margin-left: 25rem;
-    margin-right: 8rem;
   }
 }
 
@@ -239,35 +198,5 @@ button {
     width: 25%;
     padding: 1rem 1.5rem;
     font-size: 1.2rem;
-  }
-}
-
-.ticket-section__container:hover {
-  background-color: #fafafa;
-}
-.ticket-section__container:active {
-  background-color: #e1e1e1;
-}
-.show {
-  @include tablet {
-    display: inline-block;
-    margin-right: 9rem;
-    padding-left: 1.5rem;
-  }
-}
-.venue {
-  margin-right: 4rem;
-}
-.date {
-  @include desktop {
-    margin-left: 25rem;
-  }
-}
-
-.hero-section__heading--div {
-  @include desktop {
-    display: flex;
-    align-items: center;
-    margin: 0 4rem;
   }
 }
