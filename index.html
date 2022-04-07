@@ -142,7 +142,25 @@
         </div>
       </section>
 
-      <section class="comment-section"></section>
+      <section class="comment-section">
+
+        <!--Creating Form-->
+        <form class="form__name">
+          <h1 class="comment-section__header">Join the Conversation</h1>
+          <img
+            class="comment-section__avatar"
+            src="./assets/images/mohan-muruge.jpg"
+            alt="avatar"
+          />
+          <label class="form__name" for="text" id="fullName" name="fullName"> NAME </label>
+          <input type="text" placeholder="Enter your name" name="fullName" id="fullName" />
+
+          <label class="form__comment" name="comment" id="comment" for="text"> COMMENT </label>
+          <textarea class="form__textarea" type="text" placeholder="Add a new comment" name="comment" id="comment">
+          </textarea>
+
+          <button class="form__button">COMMENT</button>
+        </form>
     </main>
 
     <!--Footer Section-->

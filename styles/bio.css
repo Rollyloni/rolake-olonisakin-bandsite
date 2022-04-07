@@ -473,6 +473,7 @@ button {
   display: flex;
 }
 .comment-section__header {
+  color: black;
   padding: 2rem 0;
   padding-left: 1rem;
   font-size: 2.4rem;

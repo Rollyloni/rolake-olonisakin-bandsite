@@ -253,12 +253,12 @@ small {
   background-image: url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
-  height: 70vh;
+  height: 115vw;
   vertical-align: middle;
 }
 @media (min-width: 768px) {
   .hero-section {
-    height: 80vh;
+    height: 90vw;
   }
 }
 .hero-section__title {
@@ -313,12 +313,12 @@ small {
 iframe {
   margin: 4rem;
   margin-left: 1.5rem;
-  height: 9rem;
-  width: 90%;
+  height: 7rem;
+  width: 80%;
 }
 @media (min-width: 768px) {
   iframe {
-    width: 60%;
+    width: 55%;
     height: 11rem;
     margin-left: 4rem;
   }

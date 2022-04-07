@@ -92,5 +92,5 @@ function createTicket(ticket) {
 }
 
 for (let i = 0; i < showsArray.length; i++) {
-  const newTicket = createTicket(showsArray[i]);
+  createTicket(showsArray[i]);
 }

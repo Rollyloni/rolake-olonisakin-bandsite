@@ -23,65 +23,25 @@ const commentBox = [
       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
 ];
-
-//Create a div to contain each comment
+//Get all elements needed
 
 const sectionEl = document.querySelector(".comment-section");
-
-//Created the main header
-const headerEl = document.createElement("h1");
-headerEl.classList.add("class", "comment-section__header");
-headerEl.innerText = "Join the Conversation";
-sectionEl.appendChild(headerEl);
-
-//Create a form
-const formEl = document.createElement("form");
-formEl.classList.add("form__name");
-sectionEl.appendChild(formEl);
-
-const avatarEl = document.createElement("img");
-avatarEl.classList.add("comment-section__avatar");
-avatarEl.setAttribute("src", "./assets/images/mohan-muruge.jpg");
-formEl.appendChild(avatarEl);
-
-const inputNameEl = document.createElement("label");
-inputNameEl.classList.add("form__name");
-inputNameEl.innerText = "NAME";
-formEl.appendChild(inputNameEl);
-
-const inputEl = document.createElement("input");
-inputEl.setAttribute("type", "text");
-inputEl.setAttribute("placeholder", "Enter your name");
-inputEl.setAttribute("name", "fullName");
-inputEl.innerText = "Enter Your Name";
-formEl.appendChild(inputEl);
-
-const inputCommentEl = document.createElement("label");
-inputCommentEl.classList.add("form__comment");
-inputCommentEl.innerText = "COMMENT";
-formEl.appendChild(inputCommentEl);
-
-const typeCommentEl = document.createElement("textarea");
-typeCommentEl.setAttribute("type", "text");
-typeCommentEl.setAttribute("placeholder", "Add a new comment");
-typeCommentEl.setAttribute("name", "comment");
-formEl.appendChild(typeCommentEl);
-
-const buttonEl = document.createElement("button");
-buttonEl.classList.add("form__button");
-buttonEl.innerText = "COMMENT";
-buttonEl.setAttribute("href", "index.html");
-formEl.appendChild(buttonEl);
+const formEl = document.querySelector(".form__name");
+const avatarEl = document.querySelector(".comment-section__avatar");
+const inputNameEl = document.querySelector(".form__name");
+const inputEl = document.querySelector("fullName");
+const inputCommentEl = document.querySelector(".form__comment");
+const typeCommentEl = document.querySelector("comment");
+const buttonEl = document.querySelector(".form__button");
 
 //Would be a function
 
 //Function to create a new comment
 const containerEl = document.createElement("article");
+containerEl.classList.add("comment-section__container");
+sectionEl.appendChild(containerEl);
 
 function displayComment(person) {
-  containerEl.classList.add("comment-section__container");
-  sectionEl.appendChild(containerEl);
-
   const divEl = document.createElement("div");
   divEl.classList.add("comment-section__div");
   containerEl.appendChild(divEl);
@@ -115,7 +75,7 @@ function displayComment(person) {
 //Loop for generationg comments
 
 for (let i = 0; i < commentBox.length; i++) {
-  const newComment = displayComment(commentBox[i]);
+  displayComment(commentBox[i]);
 }
 
 // Event listener for form submission
@@ -125,21 +85,14 @@ formEl.addEventListener("submit", (event) => {
   const formEl = event.target;
 
   const nameInput = event.target.fullName.value;
-  console.log(nameInput);
 
   const imgInput = "./assets/images/mohan-muruge.jpg";
-  console.log(imgInput);
 
   const typeCommentInput = event.target.comment.value;
-  console.log(typeCommentInput);
-
-  console.log(new Date());
-
-  console.log(commentBox);
 
   //Error state
 
-  if (nameInput == "" || typeCommentEl == "") {
+  if (nameInput === "" || typeCommentEl === "") {
     inputEl.style.borderColor = "red";
     typeCommentEl.style.borderColor = "red";
     alert("Please complete all required fields");
@@ -147,23 +100,31 @@ formEl.addEventListener("submit", (event) => {
   }
 
   //New comment creator that pushes comment unto the screen
-
+  const freshDate = new Date();
   commentBox.push({
     image: imgInput,
     name: nameInput,
-    date: new Date(),
+    date:
+      freshDate.getMonth() +
+      1 +
+      "/" +
+      freshDate.getDate() +
+      "/" +
+      freshDate.getFullYear(),
     comment: typeCommentInput,
   });
 
-  //Cteated a loop that clears the default comments after submission
+  //Created a loop that clears the default comments after submission
   //The second loop re-renders the comments without the most recent one
   for (let i = 0; i < commentBox.length; i++) {
     containerEl.innerHTML = "";
-    const newComment = displayComment(commentBox[i]);
+    displayComment(commentBox[i]);
 
     for (let i = 0; i < commentBox.length - 1; i++) {
-      const newComment = displayComment(commentBox[i]);
+      displayComment(commentBox[i]);
     }
   }
   event.target.reset();
 });
+
+// Axios section
