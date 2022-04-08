@@ -14,8 +14,7 @@
 }
 
 .hero-section {
-  background-image:
-  //  linear-gradient(rgba(50, 50, 50, 0.5)),
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
