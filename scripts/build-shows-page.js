@@ -4,7 +4,6 @@ const showsData = axios
   )
   .then((response) => {
     const showsArray = response.data;
-    console.log(response.data);
 
     const ticketEl = document.querySelector(".ticket-section");
     const ticketDivEl = document.createElement("article");
@@ -43,7 +42,8 @@ const showsData = axios
 
       const dateEl = document.createElement("p");
       dateEl.classList.add("ticket-section__date");
-      dateEl.innerText = ticket.date;
+      let upDated = new Date(Number(ticket.date));
+      dateEl.innerText = upDated.toLocaleDateString("en-US");
       ticketDivEl.appendChild(dateEl);
 
       const venueTitleEl = document.createElement("p");
@@ -75,4 +75,9 @@ const showsData = axios
     for (let i = 0; i < showsArray.length; i++) {
       createTicket(showsArray[i]);
     }
+
+    const ticDivEl = document.querySelector(".ticket-section__container");
+    ticDivEl.addEventListener("click", (event) => {
+      ticDivEl.classList.add("ticket-section__container--active");
+    });
   });

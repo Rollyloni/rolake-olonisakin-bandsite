@@ -147,10 +147,10 @@ iframe {
   &__container:hover {
     background-color: #fafafa;
   }
+}
 
-  &__container:active {
-    background-color: #e1e1e1;
-  }
+.ticket-section__container--active {
+  background-color: #e1e1e1;
 }
 
 .ticket-section__venue,
