@@ -1,22 +1,19 @@
 const apiUrl =
   "https://project-1-api.herokuapp.com/comments?api_key=b24f35ee-ae2e-4b80-bfb0-6b4836edbf96";
-
+const avImage = "./assets/images/hero-bio.jpg";
 const commentData = axios.get(apiUrl).then((response) => {
   const commentBox = [
     {
-      image: "./assets/images/photo-gallery-1.jpg",
       name: response.data[0].name,
       date: response.data[0].timestamp,
       comment: response.data[0].comment,
     },
     {
-      image: "./assets/images/photo-gallery-1.jpg",
       name: response.data[1].name,
       date: response.data[1].timestamp,
       comment: response.data[1].comment,
     },
     {
-      image: "./assets/images/photo-gallery-1.jpg",
       name: response.data[2].name,
       date: response.data[2].timestamp,
       comment: response.data[2].comment,
@@ -46,7 +43,7 @@ const commentData = axios.get(apiUrl).then((response) => {
     const avatarEl = document.createElement("img");
     avatarEl.classList.add("comment-section__avatar");
     avatarEl.setAttribute("name", "avatar");
-    avatarEl.setAttribute("src", "./assets/images/photo-gallery-1.jpg");
+    avatarEl.setAttribute("src", avImage);
     divEl.appendChild(avatarEl);
 
     const nameDivEl = document.createElement("div");
@@ -89,7 +86,6 @@ const commentData = axios.get(apiUrl).then((response) => {
       })
       .then(
         axios.get(apiUrl).then((response) => {
-          console.log(response.data);
           const newPostArray = response.data;
           containerEl.innerHTML = "";
           for (let i = newPostArray.length - 1; i >= 0; i--) {
@@ -97,8 +93,8 @@ const commentData = axios.get(apiUrl).then((response) => {
             displayComment(newPostArray[i]);
           }
         })
-        //end of get request
-      );
+      ); //end of get request
+
     event.target.reset();
   });
   //end of post request
