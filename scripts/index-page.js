@@ -84,7 +84,7 @@ const commentData = axios.get(apiUrl).then((response) => {
         name: event.target.fullName.value,
         comment: event.target.comment.value,
       })
-      .then(
+      .then(() => {
         axios.get(apiUrl).then((response) => {
           const newPostArray = response.data;
           containerEl.innerHTML = "";
@@ -92,8 +92,8 @@ const commentData = axios.get(apiUrl).then((response) => {
             newPostArray[i].date = new Date(newPostArray[i].timestamp);
             displayComment(newPostArray[i]);
           }
-        })
-      ); //end of get request
+        });
+      }); //end of get request
 
     event.target.reset();
   });
